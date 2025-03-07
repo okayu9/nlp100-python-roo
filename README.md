@@ -1,2 +1,3 @@
 # nlp100-python-roo
-Roo Codeで言語処理100本ノック in Python
+
+Roo Codeを使ってPythonで言語処理100本ノックを解きます。
