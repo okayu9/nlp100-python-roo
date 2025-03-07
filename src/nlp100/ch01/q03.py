@@ -18,19 +18,19 @@ def count_word_lengths(text: str) -> list[int]:
     Returns:
         A list of integers representing the length of each word
     """
-    # 空文字列の場合は空リストを返す
+    # Return an empty list for an empty string
     if not text:
         return []
 
-    # 文字列を単語に分割
+    # Split the string into words
     words = text.split()
 
-    # 各単語から句読点などの記号を取り除き、文字数をカウント
+    # Remove punctuation and other symbols from each word and count characters
     lengths = []
     for word in words:
-        # 句読点などの記号を取り除く(アルファベット、数字、日本語文字以外を削除)
+        # Remove punctuation and symbols (keep alphabets, numbers, and Japanese chars)
         clean_word = re.sub(r"[^\w\d\u3000-\u9fff]", "", word)
-        # 空でない場合のみ文字数を追加
+        # Add the length only if the word is not empty
         if clean_word:
             lengths.append(len(clean_word))
 

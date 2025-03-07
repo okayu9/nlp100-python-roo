@@ -18,11 +18,11 @@ def alternate_concat(s1: str, s2: str) -> str:
         A string with characters from s1 and s2 alternately
     """
     result = ""
-    # 2つの文字列の短い方の長さまで交互に連結
+    # Concatenate alternately up to the length of the shorter string
     for i in range(min(len(s1), len(s2))):
         result += s1[i] + s2[i]
 
-    # 長い方の文字列の残りを追加
+    # Add the remaining characters from the longer string
     if len(s1) > len(s2):
         result += s1[len(s2) :]
     elif len(s2) > len(s1):

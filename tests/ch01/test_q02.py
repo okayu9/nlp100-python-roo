@@ -5,20 +5,20 @@ from nlp100.ch01.q02 import alternate_concat
 
 def test_alternate_concat() -> None:
     """Test for alternate_concat function."""
-    # 基本ケース: 問題の例
+    # Basic case: Example from the problem
     assert alternate_concat("パトカー", "タクシー") == "パタトクカシーー"
 
-    # 他の基本ケース
+    # Other basic cases
     assert alternate_concat("abc", "def") == "adbecf"
 
-    # 長さが異なる場合
+    # When lengths are different
     assert alternate_concat("abc", "de") == "adbec"
     assert alternate_concat("ab", "def") == "adbef"
 
-    # 空文字列を含む場合
+    # When including empty strings
     assert alternate_concat("", "abc") == "abc"
     assert alternate_concat("abc", "") == "abc"
     assert alternate_concat("", "") == ""
 
-    # 日本語と英語の混合
+    # Mix of Japanese and English
     assert alternate_concat("こんにちは", "hello") == "こhんeにlちlはo"

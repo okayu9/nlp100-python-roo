@@ -29,33 +29,33 @@ def create_element_map(
     Returns:
         A dictionary mapping from element symbols to their positions
     """
-    # デフォルト値の設定
+    # Set default value
     if one_char_positions is None:
         one_char_positions = {1, 5, 6, 7, 8, 9, 15, 16, 19}
 
-    # 空文字列の場合は空辞書を返す
+    # Return an empty dictionary for an empty string
     if not text:
         return {}
 
-    # 文字列を単語に分割
+    # Split the string into words
     words = text.split()
 
-    # 辞書の作成
+    # Create the dictionary
     element_map = {}
     for i, word in enumerate(words, 1):
-        # 句読点などの記号を取り除く
+        # Remove punctuation and other symbols
         clean_word = re.sub(r"[^\w\d\u3000-\u9fff]", "", word)
 
-        # 空でない場合のみ処理
+        # Process only if the word is not empty
         if clean_word:
-            # 位置に応じて1文字または2文字を取得
+            # Get 1 or 2 characters based on the position
             if i in one_char_positions:
                 symbol = clean_word[0]
             else:
-                # 単語が1文字しかない場合は1文字だけ取る
+                # Take only 1 character if the word has only 1 character
                 symbol = clean_word[: min(2, len(clean_word))]
 
-            # 辞書に追加
+            # Add to the dictionary
             element_map[symbol] = i
 
     return element_map
@@ -67,7 +67,7 @@ def main() -> None:
         "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might "
         "Also Sign Peace Security Clause. Arthur King Can."
     )
-    # 問題の指定通り、1, 5, 6, 7, 8, 9, 15, 16, 19番目の単語は先頭の1文字を取る
+    # Take first letter for words at positions 1, 5, 6, 7, 8, 9, 15, 16, 19 as specified
     one_char_positions = {1, 5, 6, 7, 8, 9, 15, 16, 19}
     result = create_element_map(text, one_char_positions)
     print(f"Input: {text}")
