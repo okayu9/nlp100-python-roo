@@ -1,4 +1,4 @@
-"""Tests for NLP 100 Exercise Chapter 1."""
+"""Tests for NLP 100 Exercise Chapter 1 Problem 00."""
 
 from nlp100.ch01.q00 import reverse_string
 
