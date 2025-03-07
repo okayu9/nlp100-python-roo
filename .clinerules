@@ -1,0 +1,24 @@
+# Coding
+
+## Functional Programming
+
+- Implementation of Pure Functions: Ensure that each function always returns the same output for the same input, without any side effects (such as altering global state or performing I/O operations).
+- Adherence to Immutability: Treat variables and data structures as immutable. If modifications are needed, generate new data based on the existing structures.
+- Utilization of Higher-Order Functions: Treat functions as first-class citizens, allowing them to be passed as arguments to and returned from other functions.
+- Function Composition and Decomposition: Break down complex processes into small, reusable pure functions, and then combine them to achieve the overall functionality. Design each function to adhere to the Single Responsibility Principle.
+- Declarative Coding Style: Emphasize a declarative style that focuses on "what to do" rather than "how to do it," making the intent of the code clear.
+
+## Test-Driven Development
+
+- Write Tests First: Before writing any implementation code, create test cases for the feature you intend to develop. Each test case should clearly define the expected behavior and outcomes, serving to verify the correctness of the functionality.
+- Start with Failing Tests: Initially, run the tests for the yet-to-be-implemented features and ensure that they fail. This confirms that the tests are correctly configured and that the functionality requires proper implementation.
+- Implement Minimal Code: Once tests are failing, implement only the minimum amount of code needed to pass the tests. Avoid over-implementation by focusing on writing simple, clear, and effective code.
+- Refactoring: After all tests pass, refactor the code to improve readability and maintainability. During refactoring, continuously run the tests to ensure that functionality remains correct.
+- Documentation and Comments: Provide detailed comments in both the test cases and the implementation code to clarify the intentions and expected behaviors. Ensure that other developers can understand the purpose and prerequisites of each test case.
+
+## Python
+
+- Utilize Type Hints: Ensure that all functions, methods, classes, and major variables have appropriate type hints.
+- Follow PEP 8 Coding Style: Adhere to PEP 8, Python’s official style guide, to standardize formatting, naming conventions, and indentation.
+- Use Ruff: Please do not perform linting or code formatting manually; use Ruff instead.
+- Comprehensive Documentation and Docstrings: Provide clear docstrings for every module, class, method, and function to document their usage and intent.
