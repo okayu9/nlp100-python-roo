@@ -1,6 +1,5 @@
 """Tests for NLP 100 Exercise Chapter 1."""
 
-import pytest
 from nlp100.ch01.q00 import reverse_string
 
 
